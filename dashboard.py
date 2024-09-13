@@ -86,7 +86,8 @@ if authentication_status:
         with col1:
             # Mengambil start_date & end_date dari date_input
             start_date, end_date = st.date_input(
-                label='Select Date Range',min_value=df['Date'].min(),
+                label='Select Date Range',
+                min_value=df['Date'].min(),
                 max_value=df['Date'].max(),
                 value=[df['Date'].min(), df['Date'].max()]
             )
@@ -109,7 +110,10 @@ if authentication_status:
         st.subheader('Daily Top 10 OA')
         col1, col2 = st.columns([1, 1])
         with col1:
-            selected_date_oa = st.date_input(label='Filter by Date', key='oa', min_value=df['Date'].min(), max_value=df['Date'].max())
+            selected_date_oa = st.date_input(label='Filter by Date', key='oa', 
+                                             min_value=df['Date'].min(), 
+                                             max_value=df['Date'].max(),
+                                             value=df['Date'].max())
             selected_date_oa = pd.to_datetime(selected_date_oa)
 
             st.write(selected_date_oa.strftime("%d %B %Y"))
