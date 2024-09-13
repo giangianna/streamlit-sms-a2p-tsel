@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    giangianna:
+      email: gian.ule@gmail.com
+      name: Gian Gianna
+      password: '$2b$12$asRDw6aY3mUV3wBqyw8TPOtg6M7N5xWtmb0RM9pt.4GF5bFHgrQ9i' # To be replaced with hashed password
+    admin:
+      email: admin@gmail.com
+      name: Admin
+      password: '$2b$12$9k6g9YuMG.hFkOdXWo12huKFt3ThlZHSnejau.7GA0iYxuFRu77yS' # hash password : def
+cookie:
+  expiry_days: 30
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - melsby@gmail.com
