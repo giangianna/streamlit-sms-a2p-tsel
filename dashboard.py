@@ -139,7 +139,10 @@ if authentication_status:
         st.subheader('Daily Top 10 Partner')
         col1, col2 = st.columns([1, 1])
         with col1:
-            selected_date_partners = st.date_input(label='Filter by Date', key='partners', min_value=df['Date'].min(), max_value=df['Date'].max())
+            selected_date_partners = st.date_input(label='Filter by Date', key='partners', 
+                                                   min_value=df['Date'].min(), 
+                                                   max_value=df['Date'].max(),
+                                                   value=df['Date'].max())
             selected_date_partners = pd.to_datetime(selected_date_partners)
 
             st.write(selected_date_partners.strftime("%d %B %Y"))
@@ -163,7 +166,10 @@ if authentication_status:
     with tab4:
         col1, col2 = st.columns([1, 3])
         with col1:
-            selected_date = st.date_input(label='Filter by Date', key='growth', min_value=df['Date'].min(), max_value=df['Date'].max())
+            selected_date = st.date_input(label='Filter by Date', key='growth', 
+                                          min_value=df['Date'].min(), 
+                                          max_value=df['Date'].max(),
+                                          value=df['Date'].max())
             selected_date = pd.to_datetime(selected_date)
 
             st.write(selected_date.strftime("%d %B %Y"))
